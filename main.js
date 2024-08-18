@@ -19,7 +19,7 @@ var love = setInterval(function() {
             $(this).detach();
         }
     });
-}, 200);
+}, 500);
 
 document.querySelector('#app').innerHTML = `
   <div class="wrapper_text">

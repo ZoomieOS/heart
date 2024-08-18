@@ -1,5 +1,5 @@
-html,body, #app, .wrapper_text{
-  height:100%;
+html, body, #app, .wrapper_text {
+  height: 100%;
   width: 100%;
   position: relative;
   border: unset;
@@ -13,16 +13,13 @@ html,body, #app, .wrapper_text{
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .heart {
   position: absolute;
   top: -50%;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -m-transform: rotate(-45deg);
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }
 
 .heart:before {
@@ -49,25 +46,17 @@ html,body, #app, .wrapper_text{
   border-radius: 100%;
 }
 
-@-webkit-keyframes love {
-  0%{top:110%}
-}
-@-moz-keyframes love {
-  0%{top:110%}
-}
-@-ms-keyframes love {
-  0%{top:110%}
-}
 @keyframes love {
-  0%{top:110%}
+  0% { top: 110%; }
 }
 
-.home{
-  width:100%;
+.home {
+  width: 100%;
   position: absolute;
   top: 0;
 }
-.home:before{
+
+.home:before {
   content: ' ';
   position: absolute;
   left: 0;
@@ -75,147 +64,112 @@ html,body, #app, .wrapper_text{
   top: 0;
   bottom: 0;
 }
-.home h3{
-  position:absolute;
-  font-size:74px;
+
+.home h3 {
+  position: absolute;
+  font-size: 74px;
   text-align: left;
-  color:#009393;
-  margin-left:15%;
-  font-weight:700;
+  color: #009393;
+  margin-left: 15%;
+  font-weight: 700;
+  animation: textFlicker 2s infinite ease-in-out;
 }
 
-.stage{
+@keyframes textFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.stage {
   width: auto;
   margin-top: 15px;
   height: 100px;
 }
-.cubespinner{
-  -webkit-animation-name:spincube;
-  -webkit-animation-timing-function:ease-in-out;
-  -webkit-animation-iteration-count:infinite;
-  -webkit-animation-duration:8s;
-  animation-name:spincube;
 
-  animation-timing-function:ease-in-out;
-  animation-iteration-count:infinite;
-  animation-duration:8s;
-  -webkit-transform-style:preserve-3d;
-  -moz-transform-style:preserve-3d;
-  -ms-transform-style:preserve-3d;
-  transform-style:preserve-3d;
-  -webkit-transform-origin:40px 40px 0;
-  -moz-transform-origin:40px 40px 0;
-  -ms-transform-origin:40px 40px 0;
-  transform-origin:40px 40px  0;
+.cubespinner {
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+  animation-delay: 2s;
+  transform-style: preserve-3d;
+  transform-origin: 40px 40px 0;
 }
-.cubespinner div{
-  position:absolute;
-  width:400px;
-  height:80px;
-  text-align:left;
-  color:#109393;
-  font-family:'Raleway', sans-serif;
-  font-size:34px;
-  font-weight:700;
+
+.cubespinner div {
+  position: absolute;
+  width: 400px;
+  height: 80px;
+  text-align: left;
+  color: #109393;
+  font-family: 'Raleway', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  animation: fadeIn 1s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
-.cubespinner .face1{
-  color:#f1c40f;
-  -webkit-transform:translateZ(40px);
-  -moz-transform:translateZ(40px);
-  -ms-transform:translateZ(40px);
-  transform:translateZ(40px);
-  -webkit-backface-visibility: hidden;
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
-.cubespinner .face2{
-  color: green;
-  -webkit-transform: rotateX(90deg) translateZ(40px);
-  -moz-transform: rotateX(90deg) translateZ(40px);
-  -ms-transform: rotateX(90deg) translateZ(40px);
+
+.cubespinner .face1 {
+  color: #e67e22;
+  transform: translateZ(40px);
+  backface-visibility: hidden;
+}
+
+.cubespinner .face2 {
+  color: #16a085;
   transform: rotateX(90deg) translateZ(40px);
-  -webkit-backface-visibility: hidden;
-}
-.cubespinner .face3{
-  color: black;
-  -webkit-transform:rotateX(180deg)  translateZ(40px);
-  -moz-transform:rotateX(180deg)  translateZ(40px);
-  -ms-transform:rotateX(180deg)  translateZ(40px);
-  transform:rotateX(180deg)  translateZ(40px);
-  -webkit-backface-visibility: hidden;
-}
-.cubespinner .face4{
-  color: green;
-  -webkit-transform:rotateX(270deg) translateZ(40px);
-  -moz-transform:rotateX(270deg) translateZ(40px);
-  -ms-transform:rotateX(270deg) translateZ(40px);
-  transform:rotateX(270deg) translateZ(40px);
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
+.cubespinner .face3 {
+  color: #e74c3c;
+  transform: rotateX(180deg) translateZ(40px);
+  backface-visibility: hidden;
+}
 
-/*Cubical Flipping or rotation*/
-@-webkit-keyframes spincube {
-  from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
-  15%      { -webkit-transform: rotateX(90deg);}
-  25%      { -webkit-transform: rotateX(90deg);}
-  40%      { -webkit-transform: rotateX(180deg);}
-  50%      { -webkit-transform: rotateX(180deg);}
-  65%      { -webkit-transform: rotateX(270deg);}
-  75%      { -webkit-transform: rotateX(270deg);}
-  95%      { -webkit-transform: rotateX(360deg);}
-  100%      { -webkit-transform: rotateX(360deg);}
-}@keyframes spincube {
-   from, to {
-     -webkit-transform: rotateX(0deg);
-     -moz-transform: rotateX(0deg);
-     -ms-transform: rotateX(0deg);
-     transform: rotateX(0deg);
-   }
-   15% {
-     -webkit-transform: rotateX(90deg);
-     -moz-transform: rotateX(90deg);
-     -ms-transform: rotateX(90deg);
-     transform: rotateX(90deg);
-   }
-   25% {
-     -webkit-transform: rotateX(90deg);
-     -moz-transform: rotateX(90deg);
-     -ms-transform: rotateX(90deg);
-     transform: rotateX(90deg);
-   }
-   40% {
-     -webkit-transform: rotateX(180deg);
-     -moz-transform: rotateX(180deg);
-     -ms-transform: rotateX(180deg);
-     transform: rotateX(180deg);
-   }
-   50% {
-     -webkit-transform: rotateX(180deg);
-     -moz-transform: rotateX(180deg);
-     -ms-transform: rotateX(180deg);
-     transform: rotateX(180deg);
-   }
-   65% {
-     -webkit-transform: rotateX(270deg);
-     -moz-transform: rotateX(270deg);
-     -ms-transform: rotateX(270deg);
-     transform: rotateX(270deg);
-   }
-   75% {
-     -webkit-transform: rotateX(270deg);
-     -moz-transform: rotateX(270deg);
-     -ms-transform: rotateX(270deg);
-     transform: rotateX(270deg);
-   }
-   90% {
-     -webkit-transform: rotateX(360deg);
-     -moz-transform: rotateX(360deg);
-     -ms-transform: rotateX(360deg);
-     transform: rotateX(360deg);
-   }
-   100% {
-     -webkit-transform: rotateX(360deg);
-     -moz-transform: rotateX(360deg);
-     -ms-transform: rotateX(360deg);
-     transform: rotateX(360deg);
-   }
- }
+.cubespinner .face4 {
+  color: #2980b9;
+  transform: rotateX(270deg) translateZ(40px);
+  backface-visibility: hidden;
+}
+
+.cubespinner:hover {
+  animation-play-state: paused;
+  transform: rotateY(180deg);
+}
+
+/* Cubical Flipping or rotation */
+@keyframes spincube {
+  from, to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  15% {
+    transform: rotateX(90deg);
+  }
+  25% {
+    transform: rotateX(90deg);
+  }
+  40% {
+    transform: rotateX(180deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  65% {
+    transform: rotateX(270deg);
+  }
+  75% {
+    transform: rotateX(270deg);
+  }
+  90% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
