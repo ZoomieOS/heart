@@ -5,6 +5,11 @@ html, body, #app, .wrapper_text {
   border: unset;
   margin: unset;
   padding: unset;
+  font-family: 'Pacifico', sans-serif; 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .bg_heart {
@@ -171,5 +176,29 @@ html, body, #app, .wrapper_text {
   }
   100% {
     transform: rotateX(360deg);
+  }
+}
+
+.section {
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  font-family: 'Pacifico', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: inherit;
+  padding: 0 10px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
   }
 }
