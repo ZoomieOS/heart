@@ -93,11 +93,11 @@ $(window).on("scroll", function () {
         intervals[index] = createHearts(`hearts${index + 1}`, color);
 
         const texts = [
-          { text: "C Днем Рождения!!",                 color: "#D50032" },
+          { text: "C Днем Рождения, Алина!!",                 color: "#D50032" },
           { text: "Желаю домик в Польше!",             color: "#004D80" },
           { text: "Три красных Порше!",                color: "#00695C" },
-          { text: "Денег побольше!",                   color: "#00695C" },
-          { text: "Всего самого наилучшего!",          color: "#B0004F" },
+          { text: "И денег побольше!",                   color: "#00695C" },
+          { text: "Всего самого наилучшего и прекрасного!",          color: "#B0004F" },
           { text: "И улыбнись! У тебя очень милая улыбка!)", color: "#5A2D8E" },
           { text: "Ты крутая! Продолжай сиять ✨",      color: "#006A8A" }
     ];
