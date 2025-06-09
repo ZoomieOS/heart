@@ -146,11 +146,15 @@ document.querySelector("#app").innerHTML = `
       <div class="bg_heart" id="hearts6"></div>
       <h1 id="typewriter6"></h1>
     </div>
+    <div class="section" style="height:100vh;background-color:#CCF0FF;">
+      <div class="bg_heart" id="hearts7"></div>
+      <h1 id="typewriter7"></h1>
+    </div>                                                        
   </div>
 `;
 
 // Добавляем текст для первой секции сразу
-const mainText = { text: "C Днем Рождения!!", color: "#D50032" };
+const mainText = { text: "C Днем Рождения, Алина!!", color: "#D50032" };
 
 document.addEventListener("DOMContentLoaded", function () {
   animateText("typewriter1", mainText.text, mainText.color);
