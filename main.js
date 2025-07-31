@@ -154,7 +154,7 @@ document.querySelector("#app").innerHTML = `
 `;
 
 // Добавляем текст для первой секции сразу
-const mainText = { text: "C Днем Рождения, Алина!!", color: "#D50032" };
+const mainText = { text: "C Днем Рождения, милая!!", color: "#D50032" };
 
 document.addEventListener("DOMContentLoaded", function () {
   animateText("typewriter1", mainText.text, mainText.color);
